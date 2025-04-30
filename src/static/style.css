@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.cell {
+    background-color: white;
+    border: 2px solid #555;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #eee;
+}
+
+.cell.X {
+    color: blue;
+}
+
+.cell.O {
+    color: red;
+}
+
+#status {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#reset-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Add this to your existing style.css */
+.cell.fading {
+    opacity: 0.4; /* Make it partially transparent */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Optional: Explicitly set visible opacity */
+.cell.visible {
+    opacity: 1;
+}
