@@ -41,4 +41,3 @@ class AIPlayer:
                 best_score = min(best_score, score)
 
         return best_score
-
