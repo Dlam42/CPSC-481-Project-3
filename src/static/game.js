@@ -56,7 +56,17 @@ function attachCellListeners() {
                     return;
                 }
                 updateBoard(data.board, data.turn);
-                statusElement.textContent = data.winner ? `${data.winner} wins!` : "";
+                if (data.winner) {
+                    if (data.winner === "X") {
+                        statusElement.textContent = "You Win!";
+                    } else if (data.winner === "O") {
+                        statusElement.textContent = "Cat win!";
+                    } else {
+                        statusElement.textContent = `${data.winner} wins!`;
+                    }
+                } else {
+                    statusElement.textContent = "";
+                }
             });
         });
     });
