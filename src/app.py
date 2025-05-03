@@ -2,10 +2,6 @@ from flask import Flask, render_template, request, jsonify
 from game_engine import DisappearingTicTacToe
 from ai_player import AIPlayer
 
-import os
-port = int(os.environ.get("PORT", 5000))
-app.run(host='0.0.0.0', port=port)
-
 app = Flask(__name__, static_url_path="/static")
 game = DisappearingTicTacToe()
 ai = AIPlayer("O")
@@ -55,4 +51,6 @@ def convert_board_to_json_compatible(board):
     return [[list(cell) if cell else None for cell in row] for row in board]
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
