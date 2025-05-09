@@ -1,4 +1,4 @@
-# CPSC-481-Project-2
+# CPSC-481-Project Tic Tac Toe
 ## Setup Instructions
 
 1. Clone the repository:
