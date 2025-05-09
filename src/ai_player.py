@@ -12,7 +12,7 @@ class AIPlayer:
         for move in game_state.get_valid_moves():
             game_copy = deepcopy(game_state)
             game_copy.make_move(move[0], move[1], self.player)
-            score = self.minimax(game_copy, False, depth=1)  # Start at depth 1
+            score = self.minimax(game_copy, False, depth=1)
 
             if score > best_score:
                 best_score = score
@@ -20,19 +20,22 @@ class AIPlayer:
 
         return best_move
 
-
     def minimax(self, game_state, is_maximizing, depth=0, max_depth=3):
-        if game_state.is_game_over() or depth == max_depth:
+        if game_state.is_game_over():
             if game_state.winner == self.player:
                 return 1
             elif game_state.winner == self.opponent:
                 return -1
-            return 0  # No winner
+            return 0  # Draw
+
+        if depth == max_depth:
+            return self.evaluate(game_state)
 
         best_score = float('-inf') if is_maximizing else float('inf')
         for move in game_state.get_valid_moves():
             game_copy = deepcopy(game_state)
-            game_copy.make_move(move[0], move[1], self.player if is_maximizing else self.opponent)
+            game_copy.make_move(move[0], move[1],
+                                self.player if is_maximizing else self.opponent)
             score = self.minimax(game_copy, not is_maximizing, depth + 1, max_depth)
 
             if is_maximizing:
@@ -41,3 +44,15 @@ class AIPlayer:
                 best_score = min(best_score, score)
 
         return best_score
+
+    def evaluate(self, game_state):
+        board = game_state.get_visible_board()
+        score = 0
+        for row in board:
+            for cell in row:
+                if cell:
+                    if cell[0] == self.player:
+                        score += 1
+                    elif cell[0] == self.opponent:
+                        score -= 1
+        return score
