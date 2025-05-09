@@ -4,7 +4,7 @@ This project is a modern twist on the classic Tic-Tac-Toe game, developed as par
 ## Features
 
 - Classic 3x3 Tic-Tac-Toe grid
-- Disappearing marks: Each mark vanishes three turns after placement, post the player's third move
+- Disappearing marks: Each mark vanishes three turns after placement, post the player's third move. And then that, player must remember which one will be disapper in their turn
 - Turn tracking and win detection ( No draw in this game)
 - Reset functionality to start a new game
 - Web-based interface accessible via browser
