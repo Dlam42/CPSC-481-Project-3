@@ -28,4 +28,8 @@ python app.py
 ```
 
 
-The application should now be accessible at http://127.0.0.1:5000/
+The application should now be accessible at localhost
+
+## Deployemnt
+The application is deployed on 
+https://cpsc-481-project-3.onrender.com/
