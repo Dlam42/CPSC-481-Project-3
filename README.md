@@ -1,11 +1,11 @@
 # CPSC-481-Project  Disappearing Tic-Tac-Toe
-This project is a modern twist on the classic Tic-Tac-Toe game, developed as part of the CPSC 481 course. In this version, each player's mark (X or O) disappears three turns after being placed, starting once that player has made their fourth move. This mechanic introduces a dynamic and strategic element to the traditional game.
+This project is a modern twist on the classic Tic-Tac-Toe game, developed as part of the CPSC 481 course. In this version, player's mark Black Puppy and AI's mark Orange Cat disappear three turns after being placed, starting once that player has made their fourth move. This mechanic introduces a dynamic and strategic element to the traditional game.
 
 ## Features
 
 - Classic 3x3 Tic-Tac-Toe grid
 - Disappearing marks: Each mark vanishes three turns after placement, post the player's third move
-- Turn tracking and win/draw detection
+- Turn tracking and win detection ( No draw in this game)
 - Reset functionality to start a new game
 - Web-based interface accessible via browser
 
