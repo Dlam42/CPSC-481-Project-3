@@ -38,12 +38,17 @@ pip install -r requirements.txt
 python app.py
 ```
 
+5. Run simulation:
+```bash
+python winrate.py
+```
 
 The application should now be accessible at http://localhost:5000.
 
 ## Deployemnt
 The application is deployed on 
 https://cpsc-481-project-3.onrender.com/
+(If issues with deployed application, please try accessing locally.)
 
 ## Future Enhancements
 - Animations: Add visual effects for disappearing marks.
